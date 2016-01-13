@@ -8,7 +8,17 @@
   display: flex;
   align-items: center;
 }
-#supersize_font{
+#morning_font{
+    font-size:7em; 
+    color:white;
+    font-weight: 300;
+}
+.weathercontainer{
+    position: absolute;
+    top:0; 
+    left:0;
+}
+#weather_font{
     font-size:7em; 
     color:white;
     font-weight: 300;
