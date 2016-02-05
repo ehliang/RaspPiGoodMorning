@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="pi"> 
+<html lang="en" ng-app="weather"> 
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/dist/css/bootstrap.min.css">
@@ -8,24 +8,25 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     </head>
-    <script src="js/pi.js"></script>
+    <script src="js/weather.js"></script>
 
 
 </script>
     
     
     <body class="main">
-        <div ng-controller="piController">
+        <div ng-controller="weatherController">
         <div class="vertical-center"> 
             <div class="container text-align-center" ng-hide="morning">
-                    <h1 id="morning_font">GOOD MORNING ETHAN</h1>
+                    <h1 id="morning_font">{{weatherData.currentTemperature}}</h1>
+                    <h1 id="morning_font">{{weatherData.currentTime}}</h1>
             </div>
             </div>
             <div class="weathercontainer">
             <div class="container text-align-center">
-                <h1 id="weather_font">THE WEATHER IS</h1>
-                <button id="fetchbtn" ng-click="fetch()">fetch</button><br>
-                <h1 ng-controller="piController">{{abc}}</h1>
+                <h1 id="weather_font">{{weatherIntro}}</h1>
+                <button id="fetchbtn" ng-click="weatherData.fetch(item, $event)">fetch</button><br>
+                <h1></h1>
             </div>
                 
             
